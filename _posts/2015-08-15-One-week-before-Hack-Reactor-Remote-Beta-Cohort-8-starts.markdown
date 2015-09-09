@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "One week before Hack Reactor Remote Beta Cohort 8 starts!"
+date:   2015-08-15 17:06:25
+categories: life
+---
+
+I got in Hack Reactor Remote Beta after a month’s intensive studying of Eloquent Javascript, Coderbyte Challenges and alike, reading blog posts and watching video tutorials. To be honest, I thought the interview was going to be a lot trickier than it ended up being. For one thing, everything they asked, minus the last toy problem to see the interviewee’s thought process, is covered in the email they sent out when I submitted the application. Interview was smooth, yet not without anxiety on my part: I had been worried not really about the content of the interview as I was somewhat confident, but mostly about whether they were able to find me on Skype. The anxiety went on for about 10 minutes until my interviewer showed up, but luckily it went away soon afterwards and I was able to keep my composure.
+
+One non-technical question I was asked that got me thinking on the spot was what I think “web development” means to me. To be honest, I never really sat down and gave myself a concrete answer until then and this is what I responded: “I have a strong design background from architecture and a humanities background from film and literature, so I am aspiring to acquire the necessary technical skills in combination with my interdisciplinary background in order to make online applications and platforms not only functional, but also visually appealing and user-friendly.” To me, this is the golden triangle of a successful application and will be what I am always trying to reach.
+
+So here I am, waiting for the class to start in seven days. Due to my late admission, I had very little time to meet the deadlines of the pre-course assignment and I delved right into it, full time. Having no prior professional programming experience, the hardest part was definitely to learn Git, how to do unit testing and how to debug using Chrome Developer Tools. Among the three sections of actual assignments we have to submit, the one that gave me the most trouble was definitely the twitter clone, as I had to juggle between three languages (html, css and javascript). Due to the nature of jQuery and how it constantly has to refer to html elements, I ended up laying out the html first and then implemented the javascript; css was done the last, although the designer in me was of course unhappy with a plain look, so I agonized over the stylesheet for quite a while, picking out the nicest font, width and height of elements, etc.
+
+I ended up finishing the assignments within deadline and now I have some time left till class starts. My plan is to read back to back and follow every exercise in [Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/) so I can sharpen my front-end skills.
