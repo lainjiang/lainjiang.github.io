@@ -41,9 +41,9 @@ If we ever want to operate on the object, there are a few ways:
 1): Make a deep copy of userRecord through `JSON.parse(JSON.stringify(userRecord))`. That way, a new copy of this object will be created in the memory and will have lost the immutability that's linked to a Mongoose model instance.
 2): Use .lean() in the query along with .exec() for the callback: 
 {% highlight js %}
-  User.findOne({firstName: 'Lain'}).lean().exec(function(err, userRecord) {
-    // userRecord now is a plain Javascript object, by default mutable.
-  })
+User.findOne({firstName: 'Lain'}).lean().exec(function(err, userRecord) {
+  // userRecord now is a plain Javascript object, by default mutable.
+})
 {% endhighlight %}
 3): Use .toObject on the model instance: 
 {% highlight js %}
