@@ -10,29 +10,29 @@ Yesterday, when I was working on creating server and database tests with my coll
 Consider this simple find query: 
 
 {% highlight js %}
-  User.findOne({firstName: 'Lain'}, function(err, userRecord) {
-    // do things
-  })
+User.findOne({firstName: 'Lain'}, function(err, userRecord) {
+  // do things
+})
 {% endhighlight %}
 
 If the user exists, the userRecord object being returned from the query is a Mongoose model instance in the same format as a plain Javascript object:
 
 {% highlight js %}
-  {
-    _id: 25,
-    firstName: 'Lain',
-    lastName: 'Jiang',
-    favoriteWriter: 'Marquez'
-  }
+{
+  _id: 25,
+  firstName: 'Lain',
+  lastName: 'Jiang',
+  favoriteWriter: 'Marquez'
+}
 {% endhighlight %}
 
 If I try to mutate this object directly in any way, I will find that it is unsuccessful. For example, if I try to do something like:
 
 {% highlight js %}
-  User.findOne({firstName: 'Lain'}, function(err, userRecord) {
-    userRecord.favoriteWriter = 'Borges';
-    console.log(userRecord.favoriteWriter);
-  })
+User.findOne({firstName: 'Lain'}, function(err, userRecord) {
+  userRecord.favoriteWriter = 'Borges';
+  console.log(userRecord.favoriteWriter);
+})
 {% endhighlight %}
 
 The item that is being logged will still be 'Marquez' instead of 'Borges'. 
@@ -47,20 +47,20 @@ If we ever want to operate on the object, there are a few ways:
 {% endhighlight %}
 3): Use .toObject on the model instance: 
 {% highlight js %}
-  User.findOne({firstName: 'Lain'}, function(err, userRecord) {
-    userRecord = userRecord.toObject();
-    // userRecord now is a plain Javascript object, by default mutable.
-  })
+User.findOne({firstName: 'Lain'}, function(err, userRecord) {
+  userRecord = userRecord.toObject();
+  // userRecord now is a plain Javascript object, by default mutable.
+})
 {% endhighlight %}
 
 In addition, if my query returns an array of objects, the array itself is mutable, and all the objects will be by default immutable Mongoose model instances. 
 If any of my query object has a property that points to an object:
 {% highlight js %}
-  {
-    _id: 36,
-    firstName: 'Mario',
-    lastName: 'Mario',
-    girlfriend: {name: 'Peach', title: 'Toadstool'}
-  }
+{
+  _id: 36,
+  firstName: 'Mario',
+  lastName: 'Mario',
+  girlfriend: {name: 'Peach', title: 'Toadstool'}
+}
 {% endhighlight %}
 In this example, the object that belongs to the property 'girlfriend' is indeed a plain, mutable Javascript object even when its parent object is still an immutable Mongoose model instance. 
